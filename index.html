@@ -33,9 +33,9 @@
                     <li @click="toggleDoneOf(todo)" class="todo" :class="[todo.done ? 'done' : '',classiTodos]"
                         v-for="(todo,index) in todos">
                         {{todo.text}}
-                        <span>
-                            <i @click="toggleDoneOf(todo)" class="fa-solid fa-circle-check"></i>
-                        </span>
+
+                        <i @click="toggleDoneOf(todo)" class="fa-solid fa-circle-check"></i>
+
                     </li>
                 </ul>
             </div>
