@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- LINK AL FILE CSS -->
     <link rel="stylesheet" href="style.css">
-      <!-- SCRIPT  FRAMEWORK VUE  -->
+    <!-- SCRIPT  FRAMEWORK VUE  -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2.7.8/dist/vue.js"></script>
     <!-- FONTAWESOME SCRIPT -->
     <script src="https://kit.fontawesome.com/053674e0bb.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
+
 <body>
-    
+
     <div id="root">
         <header>
             <h1>Todolist</h1>
@@ -22,16 +24,18 @@
         <main>
             <div class="container bttn-container">
                 <input @keyup.enter="addTodo" type="text" v-model="newTodo" placeholder=".......">
-                <input  @click="addTodo" type="button" value="Aggiungi una Task"></input>
+                <input @click="addTodo" type="button" value="Aggiungi una Task"></input>
             </div>
 
             <div class="container">
                 <ul class="todoList">
-                    <li class="todo"                
-                        :class="[todo.done ? 'done' : '',classiTodos]"
+
+                    <li @click="toggleDoneOf(todo)" class="todo" :class="[todo.done ? 'done' : '',classiTodos]"
                         v-for="(todo,index) in todos">
-                            {{todo.text}}
+                        {{todo.text}}
+                        <span>
                             <i @click="toggleDoneOf(todo)" class="fa-solid fa-circle-check"></i>
+                        </span>
                     </li>
                 </ul>
             </div>
@@ -43,7 +47,8 @@
         </main>
     </div>
 
-     <!-- link al js -->
+    <!-- link al js -->
     <script src="app.js"></script>
 </body>
+
 </html>
