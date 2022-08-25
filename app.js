@@ -2,38 +2,46 @@ console.log('vuetodo')
 
 const todos = [
     {
-        text: 'Fare il letto',
-        done: false,
+        text: 'Creare il file HTML',
+        done: true,
     }, 
     {
-        text: 'Fare colazione',
+        text: 'Creare il file CSS',
         done: true,
     },
     {
-        text: 'fare la doccia',
+        text: 'Creare il file JS',
+        done: true,
+    },
+    {
+        text: 'Scrivere i collegamenti al CSS e gli script',
         done: false,
     },
     {
-        text: 'Fare la spesa',
+        text: 'Primo Push',
         done: false,
     },
     {
-        text: 'Andare dal meccanico',
+        text: 'Iniziare a scrivere la bozza del codice',
         done: false,
     },
     {
-        text: 'Comprare i condensatori',
+        text: 'Fare il primo commit',
         done: false,
     },
     {
-        text: 'Chiamare Mamma',
+        text: 'Fare una pausa',
+        done: false,
+    },
+    {
+        text: 'Pushare i compiti ai tutors',
         done: false,
     },
     
 ]
 
 const app = new Vue({
-    el: '#app',
+    el: '#root',
     data: {
         todos,
         classiTodos: 'todo',

@@ -15,11 +15,13 @@ html {
 h1 {
     color: lightgrey;
     text-align: center;
+    font-size: 4rem;
 }
 
 input {
-    padding: 5px;
-    border-radius: 5px;
+    padding: 0.75rem;
+    border-radius: 3px;
+    font-weight: bold;
 }
 
 .bttn-container {
@@ -34,11 +36,10 @@ header {
     margin: 0 auto;
     max-width: 900px;
     padding: 2rem 3rem 0;
+    /* border: 1px solid white; */
 }
 
-ul,
-ol,
-menu {
+ul, ol, menu {
     text-decoration: none;
     list-style: none;
 }
@@ -49,8 +50,7 @@ menu {
     padding: 8px 10px;
     background-color: grey;
     margin-bottom: 5px;
-    border-radius: 5px;
-    border: 1px solid gray;
+    border-radius: 3px;
     display: flex;
     justify-content: space-between;
     align-items: center;
